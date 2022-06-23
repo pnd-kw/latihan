@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan/controller/hero_controller.dart';
+import 'package:latihan/edit_hero.dart';
 import 'package:latihan/model/hero_model.dart';
 
 class DetailHero extends StatelessWidget {
@@ -23,6 +24,17 @@ class DetailHero extends StatelessWidget {
               ),
             ),
             Text(heroCtrl.deskripsi.value = hero.deskripsi),
+            const SizedBox(
+              height: 40,
+            ),
+            ElevatedButton(
+              onPressed: (){
+                Get.to(() => const EditHero());
+              },
+              child: const Text(
+                'Ubah',
+              ),
+            ),
           ],
         ),
       ),
